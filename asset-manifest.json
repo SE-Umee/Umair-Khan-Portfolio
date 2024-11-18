@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9d24b132.css",
+    "main.js": "/static/js/main.116a999e.js",
+    "static/media/avatar.png": "/static/media/avatar.968339141892d6866904.png",
+    "static/media/main-image.png": "/static/media/main-image.9d82e8bbaa89c2e797be.png",
+    "static/media/Reko.png": "/static/media/Reko.367f218336bee27ab040.png",
+    "static/media/AmisChoice.png": "/static/media/AmisChoice.5103fd4a292d1ee80626.png",
+    "static/media/Motmaina2.png": "/static/media/Motmaina2.39f008be0f8fdd95c0bf.png",
+    "static/media/Giveaway.png": "/static/media/Giveaway.29ce48babf13746fd9a7.png",
+    "static/media/Motmaina1.png": "/static/media/Motmaina1.0daf3dd8ddac19ee58fa.png",
+    "static/media/Book.png": "/static/media/Book.c3fee9f42b482226e19c.png",
+    "static/media/Sensebod.png": "/static/media/Sensebod.8a44c38c3e4e07ffbaff.png",
+    "static/media/MAS.png": "/static/media/MAS.94034627dbda9cdff503.png",
+    "static/media/Fast.png": "/static/media/Fast.5e05480670ca6efd1685.png",
+    "static/media/VIP.jpeg": "/static/media/VIP.3f06d1da150247259323.jpeg",
+    "static/media/PlusOne.jpeg": "/static/media/PlusOne.31e4602023714408f125.jpeg",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.9d24b132.css.map": "/static/css/main.9d24b132.css.map",
+    "main.116a999e.js.map": "/static/js/main.116a999e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9d24b132.css",
+    "static/js/main.116a999e.js"
+  ]
+}
