@@ -183,6 +183,13 @@ const testimonials = [
     message: "excelent work",
     imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_SbSw7K9dZxfJm28QWM0Lch1iqbhKTD0Uyw&s",
   },
+  {
+    id: 9,
+    name: "sajidkhalil0001",
+    title: "Pakistan",
+    message: "Umair fixed bug in my app in no time, it was very urgent and important for me but kudos to Umair when i reached out to him and explained my issue he immediately understood the issue i mean the bug in my app and fixed it in less then 2 hours, if you have any bugs in your apps or you want to build an app then i definitely recommend Umair! I'll hire him again",
+    imageSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_SbSw7K9dZxfJm28QWM0Lch1iqbhKTD0Uyw&s",
+  },
 ];
 
 export default function Projects() {
