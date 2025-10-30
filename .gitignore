@@ -7,7 +7,7 @@ node_modules
 /coverage
 
 # Production
-/build
+# Note: build folder is tracked in gh-pages branch for deployment
 
 # Misc
 .DS_Store
