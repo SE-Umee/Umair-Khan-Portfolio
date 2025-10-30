@@ -1,26 +1,52 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 export default function Contact() {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [statusMessage, setStatusMessage] = useState("");
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  // Function to collect form data
-  const handleSubmit = (event) => {
+  // Function to send email directly
+  const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsSubmitting(true);
+    setStatusMessage("");
 
-    const firstName = event.target["first-name"].value;
-    const lastName = event.target["last-name"].value;
-    const email = event.target["email"].value;
-    const message = event.target["message"].value;
+    // Web3Forms Access Key - Loaded from environment variable
+    const ACCESS_KEY = process.env.REACT_APP_WEB3FORMS_ACCESS_KEY;
 
-    // Create a mailto link with the form data
-    const mailtoLink = `mailto:se.umee22@gmail.com?subject=Contact%20Form%20Submission&body=Full%20Name:%20${firstName + " " +lastName}%0AEmail:%20${email}%0AMessage:%20${message}`;
+    const formData = new FormData(event.target);
+    formData.append("access_key", ACCESS_KEY);
+    formData.append("subject", "New Contact Form Submission from Portfolio");
+    formData.append("from_name", "Portfolio Contact Form");
+    formData.append("redirect", "false"); // Disable redirect for better control
 
-    // Open the user's default email client with the pre-filled fields
-    window.location.href = mailtoLink;
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        console.log("Email sent successfully:", data);
+        setStatusMessage("Message sent successfully! I'll get back to you soon.");
+        event.target.reset();
+      } else {
+        console.error("Web3Forms Error:", data);
+        throw new Error(data.message || "Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      setStatusMessage("Failed to send message. Please try again or email me directly at se.umee22@gmail.com");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -119,12 +145,34 @@ export default function Contact() {
             </div>
           </div>
           <div className="mt-8">
-            <button type="submit" className="btn btn-primary text-base w-full gap-2 hover:scale-105 transition-transform">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Send Message
+            <button 
+              type="submit" 
+              disabled={isSubmitting}
+              className="btn btn-primary text-base w-full gap-2 hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              {isSubmitting ? (
+                <>
+                  <span className="loading loading-spinner loading-sm"></span>
+                  Sending...
+                </>
+              ) : (
+                <>
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                  Send Message
+                </>
+              )}
             </button>
+            {statusMessage && (
+              <div className={`mt-4 p-4 rounded-lg text-center ${
+                statusMessage.includes("success") 
+                  ? "bg-success/10 text-success" 
+                  : "bg-error/10 text-error"
+              }`}>
+                {statusMessage}
+              </div>
+            )}
           </div>
         </form>
       </div>
