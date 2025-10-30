@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Umair-Khan-Portfolio/static/css/main.c6fd6523.css",
-    "main.js": "/Umair-Khan-Portfolio/static/js/main.f72ac22b.js",
-    "static/media/avatar.png": "/Umair-Khan-Portfolio/static/media/avatar.968339141892d6866904.png",
+    "main.css": "/Umair-Khan-Portfolio/static/css/main.6a171233.css",
+    "main.js": "/Umair-Khan-Portfolio/static/js/main.cc5b437f.js",
+    "static/media/my-image.png": "/Umair-Khan-Portfolio/static/media/my-image.f38b9864bb9d29cf97da.png",
     "static/media/main-image.png": "/Umair-Khan-Portfolio/static/media/main-image.9d82e8bbaa89c2e797be.png",
     "static/media/Reko.png": "/Umair-Khan-Portfolio/static/media/Reko.367f218336bee27ab040.png",
     "static/media/AmisChoice.png": "/Umair-Khan-Portfolio/static/media/AmisChoice.5103fd4a292d1ee80626.png",
@@ -20,11 +20,11 @@
     "static/media/slick.ttf": "/Umair-Khan-Portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/Umair-Khan-Portfolio/index.html",
     "static/media/slick.woff": "/Umair-Khan-Portfolio/static/media/slick.295183786cd8a1389865.woff",
-    "main.c6fd6523.css.map": "/Umair-Khan-Portfolio/static/css/main.c6fd6523.css.map",
-    "main.f72ac22b.js.map": "/Umair-Khan-Portfolio/static/js/main.f72ac22b.js.map"
+    "main.6a171233.css.map": "/Umair-Khan-Portfolio/static/css/main.6a171233.css.map",
+    "main.cc5b437f.js.map": "/Umair-Khan-Portfolio/static/js/main.cc5b437f.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6fd6523.css",
-    "static/js/main.f72ac22b.js"
+    "static/css/main.6a171233.css",
+    "static/js/main.cc5b437f.js"
   ]
 }
