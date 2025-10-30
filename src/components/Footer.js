@@ -3,20 +3,29 @@ export default function Footer() {
     window.location.href = "mailto:se.umee22@gmail.com";
   };
   return (
-    <div className="text-lg text-center relative isolate px-6 py-24 lg:px-8">
-      <div className="mt-10 flex items-center justify-center gap-x-4">
+    <footer className="text-lg text-center relative isolate px-6 py-24 lg:px-8 bg-gradient-to-b from-base-200 to-base-300 border-t-2 border-primary/20">
+      <div className="max-w-7xl mx-auto">
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold mb-4 text-primary">Umair Khan</h3>
+          <p className="text-base opacity-80 max-w-md mx-auto">
+            React Native Developer | Building Exceptional Mobile Experiences
+          </p>
+        </div>
+        
+        <div className="flex items-center justify-center gap-x-4 flex-wrap">
         <button
-          className="btn btn-outline btn-square"
+          className="btn btn-circle btn-outline hover:btn-primary hover:scale-110 transition-all"
           onClick={() =>
             window.open(
               "https://www.linkedin.com/in/umair-khan-b4b227240",
               "_blank"
             )
           }
+          aria-label="LinkedIn"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="h-6 w-6"
             fill="currentColor"
             viewBox="0 0 16 16"
           >
@@ -24,12 +33,13 @@ export default function Footer() {
           </svg>
         </button>
         <button
-          className="btn btn-outline btn-square"
+          className="btn btn-circle btn-outline hover:btn-primary hover:scale-110 transition-all"
           onClick={() => window.open("https://github.com/SE-Umee", "_blank")}
+          aria-label="GitHub"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="h-6 w-6"
             fill="currentColor"
             viewBox="0 0 16 16"
           >
@@ -38,11 +48,12 @@ export default function Footer() {
         </button>
         <button
           onClick={handleEmailClick}
-          className="btn btn-outline btn-square"
+          className="btn btn-circle btn-outline hover:btn-primary hover:scale-110 transition-all"
+          aria-label="Email"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8"
+            className="h-6 w-6"
             fill="currentColor"
             viewBox="0 0 16 16"
           >
@@ -51,49 +62,51 @@ export default function Footer() {
           </svg>
         </button>
         <button
-          className="btn btn-outline btn-square flex items-center justify-center m-0 p-0"
+          className="btn btn-circle btn-outline hover:btn-primary hover:scale-110 transition-all"
           onClick={() =>
             window.open("https://www.fiverr.com/se_umair", "_blank")
           }
+          aria-label="Fiverr"
         >
-          <div className="flex items-center justify-center">
-            <svg
-               xmlns="http://www.w3.org/2000/svg"
-               className="h-8 w-8"
-               fill="currentColor"
-               viewBox="0 0 19 24"
-            >
-              <path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z" />
-              <circle cx="14.375" cy="1.875" r="1.875" />
-            </svg>
-          </div>
+          <svg
+             xmlns="http://www.w3.org/2000/svg"
+             className="h-6 w-6"
+             fill="currentColor"
+             viewBox="0 0 19 24"
+          >
+            <path d="M16.25 16.25v-10h-10v-.625c0-1.034.841-1.875 1.875-1.875H10V0H8.125A5.632 5.632 0 0 0 2.5 5.625v.625H0V10h2.5v6.25H0V20h8.75v-3.75h-2.5V10h6.285v6.25H10V20h8.75v-3.75h-2.5z" />
+            <circle cx="14.375" cy="1.875" r="1.875" />
+          </svg>
         </button>
 
         <button
-          className="btn btn-outline btn-square flex"
+          className="btn btn-circle btn-outline hover:btn-primary hover:scale-110 transition-all"
           onClick={() =>
             window.open(
               "https://www.upwork.com/freelancers/~0134cfdcde998bcafb",
               "_blank"
             )
           }
+          aria-label="Upwork"
         >
-          <div className="flex ">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-10 w-10"
-              fill="currentColor"
-              viewBox="0 -3 30 35"
-            >
-              <path d="M24.75 17.542c-1.469 0-2.849-0.62-4.099-1.635l0.302-1.432 0.010-0.057c0.276-1.521 1.13-4.078 3.786-4.078 1.99 0 3.604 1.615 3.604 3.604 0 1.984-1.615 3.599-3.604 3.599zM24.75 6.693c-3.385 0-6.016 2.198-7.083 5.818-1.625-2.443-2.865-5.38-3.583-7.854h-3.646v9.484c-0.005 1.875-1.521 3.391-3.396 3.396-1.875-0.005-3.391-1.526-3.396-3.396v-9.484h-3.646v9.484c0 3.885 3.161 7.068 7.042 7.068 3.885 0 7.042-3.182 7.042-7.068v-1.589c0.708 1.474 1.578 2.974 2.635 4.297l-2.234 10.495h3.729l1.62-7.615c1.417 0.906 3.047 1.479 4.917 1.479 4 0 7.25-3.271 7.25-7.266 0-4-3.25-7.25-7.25-7.25z" />
-            </svg>
-          </div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-7 w-7"
+            fill="currentColor"
+            viewBox="0 -3 30 35"
+          >
+            <path d="M24.75 17.542c-1.469 0-2.849-0.62-4.099-1.635l0.302-1.432 0.010-0.057c0.276-1.521 1.13-4.078 3.786-4.078 1.99 0 3.604 1.615 3.604 3.604 0 1.984-1.615 3.599-3.604 3.599zM24.75 6.693c-3.385 0-6.016 2.198-7.083 5.818-1.625-2.443-2.865-5.38-3.583-7.854h-3.646v9.484c-0.005 1.875-1.521 3.391-3.396 3.396-1.875-0.005-3.391-1.526-3.396-3.396v-9.484h-3.646v9.484c0 3.885 3.161 7.068 7.042 7.068 3.885 0 7.042-3.182 7.042-7.068v-1.589c0.708 1.474 1.578 2.974 2.635 4.297l-2.234 10.495h3.729l1.62-7.615c1.417 0.906 3.047 1.479 4.917 1.479 4 0 7.25-3.271 7.25-7.266 0-4-3.25-7.25-7.25-7.25z" />
+          </svg>
         </button>
+        </div>
+        
+        <div className="mt-12 pt-8 border-t border-primary/20">
+          <p className="text-base mb-2">
+            <span className="font-semibold">Created with ❤️ by Umair Khan</span>
+          </p>
+          <p className="text-sm opacity-70">Copyright © 2024 React Portfolio. All Rights Reserved</p>
+        </div>
       </div>
-      <p className="mt-3">
-        Created with ❤️ by <span className="font-bold">Umair Khan</span>
-      </p>
-      <p>Copyright © 2024 React Portfolio. All Rights Reserved</p>
-    </div>
+    </footer>
   );
 }
